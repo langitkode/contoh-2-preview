@@ -5,31 +5,30 @@ import { UMKMConfig } from "@/types/config";
 import { Monitor, Smartphone } from "lucide-react";
 
 // Dynamic Imports based on generated site content
-import template2 from "@/templates/template-2";
 import template3 from "@/templates/template-3";
 import template10 from "@/templates/template-10";
+import template1 from "@/templates/template-1";
 
 interface PreviewWrapperProps {
   config: UMKMConfig;
 }
 
 const templates: Record<string, React.ComponentType<{ config: UMKMConfig }>> = {
-  "template-2": template2,
   "template-3": template3,
   "template-10": template10,
+  "template-1": template1,
 };
 
 export default function PreviewWrapper({ config }: PreviewWrapperProps) {
   const [activeTemplate, setActiveTemplate] = useState<string>(
-    config.templateId || "template-2"
+    config.templateId || "template-1"
   );
   
   const [isOpen, setIsOpen] = useState(false);
 
-  // Available templates from config or fallback to just the active one
   const availableTemplates = Object.keys(templates);
 
-  const CurrentTemplate = templates[activeTemplate] || templates["template-2"] || Object.values(templates)[0];
+  const CurrentTemplate = templates[activeTemplate] || templates["template-1"] || Object.values(templates)[0];
 
   const activeConfig = {
     ...config,

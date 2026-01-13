@@ -5,7 +5,7 @@ export const config: UMKMConfig = {
   "businessName": "contoh-2",
   "tagline": "Quality & Service",
   "description": "Aku gatauu yaaa apasih sok asik",
-  "templateId": "template-2",
+  "templateId": "template-1",
   "heroImage": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
   "theme": {
     "primaryColor": "#DC2626",
@@ -25,9 +25,9 @@ export const config: UMKMConfig = {
   "testimonials": [],
   "instagramImages": [],
   "includedTemplates": [
-    "template-2",
     "template-3",
-    "template-10"
+    "template-10",
+    "template-1"
   ],
   "cta": {
     "link": "",
